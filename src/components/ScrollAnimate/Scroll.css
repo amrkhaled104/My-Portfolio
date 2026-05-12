@@ -1,0 +1,10 @@
+.scroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background: var(--purple); 
+  transform-origin: 0%;
+  z-index: 9999;
+}
