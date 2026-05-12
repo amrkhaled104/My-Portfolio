@@ -2,6 +2,7 @@ import "./App.css";
 import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import HeroSection from "./components/HeroSection/HeroSection";
+import Contact from "./components/Contact/Contact";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -15,6 +16,7 @@ function App() {
       <>
         <Navbar />
         <HeroSection />
+        <Contact />
       </>
     </>
   );
