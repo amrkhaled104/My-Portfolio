@@ -1,0 +1,112 @@
+.hero-section {
+  min-height: 100vh;
+  background-image: url("../../assets/background-stars.svg");
+  background-size: cover;
+}
+
+.container {
+  width: 100%;
+  gap: 3rem;
+  display: grid;
+  max-width: 800px;
+  align-items: center;
+  grid-template-areas: "content img";
+}
+
+.content p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.content {
+  grid-area: content;
+}
+
+.name {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.img-box {
+  grid-area: img;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 8px;
+}
+
+.img-box img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 4px solid var(--purple);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.type {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.type span {
+  color: var(--hight-light-color);
+}
+
+.a-btn .hi {
+  transition: color 0.3s ease;
+}
+
+/* Icon Animation */
+.a-btn:hover .hand-icon {
+  display: inline-block;
+  animation: wave 1s infinite ease-in-out;
+}
+
+/* Hand Icon Styling */
+.hand-icon {
+  display: inline-block;
+  transform: rotate(20deg);
+}
+
+/* Keyframes for Waving Effect */
+@keyframes wave {
+  0%,
+  100% {
+    transform: translateX(-3px) rotate(20deg);
+  }
+
+  50% {
+    transform: translateX(5px) rotate(35deg);
+  }
+}
+
+@media (max-width: 770px) {
+  .container {
+    gap: 2rem;
+    margin-top: 4rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "img"
+      "content";
+  }
+
+  .img-box img {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+  .boi-i {
+    font-size: 14px;
+  }
+
+  .type {
+    font-size: 1.5rem;
+  }
+}
+
