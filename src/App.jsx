@@ -4,11 +4,12 @@ import Navbar from "./components/Navbar/Navbar";
 import HeroSection from "./components/HeroSection/HeroSection";
 import Contact from "./components/Contact/Contact";
 import Skills from "./components/Skills/Skills";
+import About from "./components/About/About";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 function App() {
-  // Initialize AOS (animations on scroll)
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
@@ -17,6 +18,8 @@ function App() {
       <>
         <Navbar />
         <HeroSection />
+        <About />
+
         <Skills />
         <Contact />
       </>
