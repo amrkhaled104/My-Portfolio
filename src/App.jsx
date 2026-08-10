@@ -6,7 +6,7 @@ import Contact from "./components/Contact/Contact";
 import Scroll from './components/ScrollAnimate/Scroll';
 import Skills from "./components/Skills/Skills";
 import About from "./components/About/About";
-import Projects from "./components/Projects/Projects";
+import Projects from "./components/projects/projects";
 
 
 import AOS from "aos";
