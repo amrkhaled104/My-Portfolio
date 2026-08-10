@@ -31,65 +31,41 @@ const Skills = () => {
       title: "Frontend Development",
       type: "frontend",
       accent: "#5eead4",
-      description:
-        "I build responsive frontends with a focus on clarity, rhythm, and interaction polish.",
       skills: [
         {
           icon: <FaHtml5 />,
           name: "HTML",
-          detail: "Semantic markup, accessibility, and SEO-friendly structure.",
-          level: "Proficiency: Advanced",
-          experience: "Experience: 4+ years",
-          tags: ["semantic", "a11y"],
+          badge: "Advanced",
           accent: "#e34f26",
         },
         {
           icon: <FaCss3Alt />,
           name: "CSS",
-          detail: "Responsive layouts, visual rhythm, and handcrafted motion.",
-          level: "Proficiency: Advanced",
-          experience: "Experience: 4+ years",
-          tags: ["layout", "motion"],
+          badge: "Advanced",
           accent: "#264de4",
         },
         {
           icon: <SiTailwindcss />,
           name: "Tailwind",
-          detail:
-            "Fast composition when a utility-first workflow keeps the system sharp.",
-          level: "Proficiency: Strong",
-          experience: "Experience: 3+ years",
-          tags: ["utilities", "design tokens"],
+          badge: "Layout / UI",
           accent: "#38bdf8",
         },
         {
           icon: <FaJs />,
           name: "JavaScript",
-          detail:
-            "Interaction logic, DOM orchestration, and UI state choreography.",
-          level: "Proficiency: Advanced",
-          experience: "Experience: 4+ years",
-          tags: ["logic", "interaction"],
+          badge: "Advanced",
           accent: "#f7df1e",
         },
         {
           icon: <SiTypescript />,
           name: "TypeScript",
-          detail:
-            "Typed interfaces, safer refactors, and predictable application layers.",
-          level: "Proficiency: Strong",
-          experience: "Experience: 2+ years",
-          tags: ["types", "safety"],
+          badge: "Strong",
           accent: "#3178c6",
         },
         {
           icon: <FaReact />,
           name: "React",
-          detail:
-            "Component systems, state flow, and polished interface assembly.",
-          level: "Proficiency: Advanced",
-          experience: "Experience: 3+ years",
-          tags: ["components", "state"],
+          badge: "Advanced",
           accent: "#61dafb",
         },
       ],
@@ -98,28 +74,18 @@ const Skills = () => {
       title: "Backend Development",
       type: "backend",
       accent: "#f59e0b",
-      description:
-        "The backend stack is still in progress, but the direction is clear: practical APIs and reliable data handling.",
       isComingSoon: true,
       skills: [
         {
           icon: <FaNodeJs />,
           name: "Node.js",
-          detail:
-            "Server-side logic, APIs, and tooling that supports the frontend.",
-          level: "Roadmap: Active",
-          experience: "Focus: Building",
-          tags: ["apis", "runtime"],
+          badge: "Building",
           accent: "#84cc16",
         },
         {
           icon: <SiMongodb />,
           name: "MongoDB",
-          detail:
-            "Schema-light data modeling and content-driven storage patterns.",
-          level: "Roadmap: Active",
-          experience: "Focus: Building",
-          tags: ["documents", "data"],
+          badge: "Building",
           accent: "#10b981",
         },
       ],
@@ -128,35 +94,23 @@ const Skills = () => {
       title: "Tools & Extras",
       type: "tools",
       accent: "#a78bfa",
-      description:
-        "These are the tools that keep the work tight: version control, motion, and the small details that ship polished UI.",
       skills: [
         {
           icon: <FaGithub />,
           name: "GitHub",
-          detail:
-            "Branching, reviews, and the release habits that keep projects clean.",
-          level: "Proficiency: Strong",
-          experience: "Experience: 4+ years",
-          tags: ["git", "workflow"],
+          badge: "Workflow",
           accent: "#ffffff",
         },
         {
           icon: <FaDatabase />,
           name: "SQL",
-          detail: "Queries, joins, and data shaping for structured backends.",
-          level: "Proficiency: Working",
-          experience: "Experience: 2+ years",
-          tags: ["queries", "data"],
+          badge: "Working",
           accent: "#38bdf8",
         },
         {
           icon: <SiFramer />,
           name: "Framer Motion",
-          detail: "Micro-interactions and motion systems with a tactile feel.",
-          level: "Proficiency: Strong",
-          experience: "Experience: 2+ years",
-          tags: ["motion", "interaction"],
+          badge: "Motion",
           accent: "#f472b6",
         },
       ],
@@ -174,10 +128,6 @@ const Skills = () => {
         <header className="skills-header">
           <div className="skills-heading-copy">
             <h2 data-aos="fade-down">My Skills</h2>
-            <p data-aos="fade-up" data-aos-delay="150">
-              A curated toolkit for building crisp interfaces, thoughtful
-              motion, and systems that feel designed rather than assembled.
-            </p>
           </div>
         </header>
 
@@ -211,8 +161,6 @@ const Skills = () => {
             >
               <h3>{category.title}</h3>
 
-              <p className="category-description">{category.description}</p>
-
               <div className="skills-chips">
                 {category.skills.map((skill, index) => (
                   <article
@@ -223,38 +171,14 @@ const Skills = () => {
                     data-aos="zoom-in"
                     data-aos-delay={index * 60}
                   >
-                    <div className="skill-card__top">
-                      <div className="skill-icon">{skill.icon}</div>
-                      <div>
-                        <h4>{skill.name}</h4>
-                        <p className="skill-tag">{skill.tags.join(" / ")}</p>
-                      </div>
+                    <div className="skill-icon">{skill.icon}</div>
+                    <div className="skill-card__content">
+                      <h4>{skill.name}</h4>
+                      <span className="skill-badge">{skill.badge}</span>
                     </div>
-
-                    <p className="skill-card__detail">{skill.detail}</p>
-
-                    <div className="skill-card__meta">
-                      <span>{skill.level}</span>
-                      <span>{skill.experience}</span>
-                    </div>
-
-                    <ul
-                      className="skill-card__tags"
-                      aria-label={`${skill.name} tags`}
-                    >
-                      {skill.tags.map((tag) => (
-                        <li key={tag}>{tag}</li>
-                      ))}
-                    </ul>
                   </article>
                 ))}
               </div>
-
-              {category.isComingSoon && (
-                <p className="category-footnote">
-                  Backend layer is being expanded next.
-                </p>
-              )}
             </article>
           ))}
         </div>

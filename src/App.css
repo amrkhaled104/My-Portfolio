@@ -28,6 +28,14 @@
   --surface-border: rgba(17, 17, 17, 0.09);
   --text-soft: rgba(17, 17, 17, 0.68);
   --shadow-elevated: rgba(17, 17, 17, 0.08);
+  --skills-bg: #f9f9f9;
+  --skills-surface: #ffffff;
+  --skills-surface-alt: #f5f5f7;
+  --skills-text: #111111;
+  --skills-muted: #6b7280;
+  --skills-border: rgba(17, 17, 17, 0.12);
+  --skills-border-strong: rgba(17, 17, 17, 0.2);
+  --skills-hover-bg: rgba(17, 17, 17, 0.03);
 }
 
 .dark-theme {
@@ -50,6 +58,14 @@
   --surface-border: rgba(255, 255, 255, 0.09);
   --text-soft: rgba(255, 255, 255, 0.7);
   --shadow-elevated: rgba(0, 0, 0, 0.35);
+  --skills-bg: #0a0a0c;
+  --skills-surface: #121216;
+  --skills-surface-alt: #18181f;
+  --skills-text: #ffffff;
+  --skills-muted: #94a3b8;
+  --skills-border: rgba(255, 255, 255, 0.08);
+  --skills-border-strong: rgba(255, 255, 255, 0.2);
+  --skills-hover-bg: rgba(255, 255, 255, 0.03);
 }
 
 html {
