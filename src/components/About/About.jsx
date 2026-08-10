@@ -3,7 +3,7 @@ import about from "../../assets/me2.jpg";
 import CV from "../../assets/amrkhaled_cv_front.pdf";
 import DownloadIcon from "@mui/icons-material/Download";
 import { motion } from "framer-motion";
-import { data } from "react-router-dom";
+// import { data } from "react-router-dom";
 
 const About = () => {
   return (
