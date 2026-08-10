@@ -8,6 +8,7 @@ const Scroll = () => {
         <motion.div className='scroll'
             style={{
                 scaleX: scrollYProgress,
+                // originX: 0
             }}
         >
 

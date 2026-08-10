@@ -5,7 +5,6 @@ import { Typewriter } from "react-simple-typewriter";
 import BackHandIcon from "@mui/icons-material/BackHand";
 import { motion } from "framer-motion";
 
-
 const HeroSection = () => {
   return (
     <div className="hero-section section " id="home">
@@ -50,18 +49,18 @@ const HeroSection = () => {
             transition={{ duration: 1, ease: "easeOut", delay: 1 }}
           >
             I specialize in building scalable full-stack applications using
-             React, and modern web technologies. I have hands-on
-            experience developing real-world projects with authentication, APIs,
-            and responsive UI, focusing on performance, clean code, and user
+            React, and modern web technologies. I have hands-on experience
+            developing real-world projects with authentication, APIs, and
+            responsive UI, focusing on performance, clean code, and user
             experience.
           </motion.p>
 
           <motion.a
             href="#contact"
             className="hi a-btn"
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.5, type: "spring", delay: 1.5 }}
+            initial={{ scale: 4, opacity: 0, rotate: 180, x: -300, y: 300 }}
+            animate={{ scale: 1, opacity: 1, x: 0, y: 0, rotate: 0 }}
+            transition={{ duration: 1, type: "spring", delay: 1.5 }}
           >
             Let's Connect,
             <BackHandIcon className="hi hand-icon" />

@@ -2,6 +2,8 @@ import "./About.css";
 import about from "../../assets/me2.jpg";
 import CV from "../../assets/amrkhaled_cv_front.pdf";
 import DownloadIcon from "@mui/icons-material/Download";
+import { motion } from "framer-motion";
+import { data } from "react-router-dom";
 
 const About = () => {
   return (
@@ -59,15 +61,18 @@ const About = () => {
             </p>
           </div> */}
 
-          <a
+          <motion.a
             href={CV}
             download
             className="a-btn"
             data-aos="zoom-in"
             data-aos-delay="300"
+            initial={{ scale: 4, opacity: 0, rotate: 180, x: -300, y: 300 }}
+            animate={{ scale: 1, opacity: 1, x: 0, y: 0, rotate: 0 }}
+            transition={{ duration: 1}}
           >
             Download CV <DownloadIcon />
-          </a>
+          </motion.a>
         </div>
       </div>
     </div>
