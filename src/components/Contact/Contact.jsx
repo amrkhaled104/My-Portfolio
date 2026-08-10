@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { useForm } from "react-hook-form";
-import emailjs from "@emailjs/browser";
+import emailjs from '@emailjs/browser';
 import NearMeIcon from "@mui/icons-material/NearMe";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import toast from "react-hot-toast";
