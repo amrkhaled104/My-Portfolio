@@ -1,0 +1,190 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-box {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.8rem;
+  flex-wrap: wrap;
+}
+.projectBtn {
+  margin-top: 0;
+  padding: 0.82rem 1.1rem;
+  border-radius: 999px !important;
+  border: 1px solid var(--skills-border);
+  background: var(--skills-surface);
+  color: var(--skills-text);
+  cursor: pointer;
+  line-height: 1;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(0);
+  font-weight: 500;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .projectBtn:hover {
+    transform: translateY(-2px);
+    border-color: var(--skills-border-strong);
+    background: var(--skills-hover-bg);
+  }
+}
+
+.activeBtn {
+  border-color: var(--skills-border-strong);
+  background: var(--skills-hover-bg);
+  color: var(--skills-text);
+}
+
+.projectBtn:active,
+.activeBtn:active {
+  transform: translateY(0) scale(0.985);
+}
+
+.card-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.cardBox {
+  position: relative;
+  min-width: 280px;
+  min-height: 320px;
+  padding: 3px;
+  border-radius: 12px;
+  z-index: 0;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Animated border */
+.cardBox::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--angle),
+    var(--body-bg),
+    var(--skill-bg),
+    var(--purple)
+  );
+  z-index: -1;
+  animation: spin 4s linear infinite;
+}
+
+/* Smooth hover (removed broken matrix transform) */
+.cardBox:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* ================= Card Inner ================= */
+.card-content-wrapper {
+  background: var(--skill-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= Animation ================= */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+/* ================= Card Image ================= */
+.cardBox img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* ================= Card Content ================= */
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  text-align: center;
+  flex: 1;
+}
+
+/* Title */
+.cardContent h3 {
+  font-size: 1.1rem;
+  color: var(--purple);
+  margin-bottom: 10px;
+}
+
+/* ================= Buttons ================= */
+.cardContent a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+
+  padding: 8px 12px;
+  margin-top: 10px;
+
+  border-radius: 1.5rem;
+  border: 1px solid var(--body-text);
+
+  background: var(--skill-bg);
+  text-decoration: none;
+  font-weight: 600;
+
+  transition: all 0.25s ease;
+}
+
+.cardContent a:hover {
+  background: var(--purple);
+  color: #fff;
+  border-color: var(--purple);
+}
+
+/* Arrow Animation */
+.arrowIcon {
+  transition: transform 0.25s ease;
+}
+
+.cardContent a:hover .arrowIcon {
+  transform: translateX(5px);
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 768px) {
+  .cardBox {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 557px) {
+  .card-container {
+    gap: 1.5rem;
+  }
+}

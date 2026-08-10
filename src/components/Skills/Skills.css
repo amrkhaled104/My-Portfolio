@@ -68,10 +68,15 @@
 .skills-filter button[aria-pressed="true"] {
   border-color: var(--skills-border-strong);
   background: var(--skills-hover-bg);
+  transform: scale(0.96);
 }
 
 .skills-filter button:active {
-  transform: translateY(0) scale(0.985);
+  transform: translateY(0) scale(0.95);
+  -webkit-transform: translateY(0) scale(0.95);
+  -moz-transform: translateY(0) scale(0.95);
+  -ms-transform: translateY(0) scale(0.95);
+  -o-transform: translateY(0) scale(0.95);
 }
 
 .skills-categories {

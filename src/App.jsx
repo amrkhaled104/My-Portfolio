@@ -6,6 +6,8 @@ import Contact from "./components/Contact/Contact";
 import Scroll from './components/ScrollAnimate/Scroll';
 import Skills from "./components/Skills/Skills";
 import About from "./components/About/About";
+import Projects from "./components/Projects/Projects";
+
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -22,6 +24,7 @@ function App() {
         <HeroSection />
         <About />
         <Skills />
+        <Projects />
         <Contact />
       </>
     </>
