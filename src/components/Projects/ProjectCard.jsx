@@ -16,12 +16,12 @@ const ProjectCard = ({ projects }) => {
             <img src={project.img} alt="img" />
             <div className="cardContent">
               <h3>{project.name}</h3>
-              <a href={project.link}>
+              <a href={project.link}  target="_blank" rel="noopener noreferrer" >
                 View Code
                 <FaLongArrowAltRight className='arrowIcon' />
               </a>
               {project.site && (
-                <a href={project.site}>
+                <a href={project.site} target="_blank" rel="noopener noreferrer">
                   Live Demo
                   <FaLongArrowAltRight className='arrowIcon' />
                 </a>
